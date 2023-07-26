@@ -3,7 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// Created an array of questions for user input.
 const questions = [
     {
         type: "input",
@@ -33,19 +33,28 @@ const questions = [
     {
         type: 'list',
         name: 'license',
-        message: 'Choose License: ',
+        message: 'Choose License:',
         choices: [''],
     },
-
+    {
+        type: "input",
+        name: 'test',
+        message: ''
+    },
+    {
+        type: "input",
+        name: 'questions',
+        message: ''
+    },
 ];
 
-// TODO: Create a function to write README file
+// Created a function to write README file.
 function writeToFile(fileName, data) {
     const resolved = data
     fs.writeFileSync(fileName, resolved)
 }
 
-// TODO: Create a function to initialize app
+// Created a function to initialize app.
 function init() {
     inquirer.prompt(questions).then((data)=>
     {
@@ -53,5 +62,5 @@ function init() {
     });
 }
 
-// Function call to initialize app
+// Function call to initialize app.
 init();

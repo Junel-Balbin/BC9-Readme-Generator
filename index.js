@@ -28,18 +28,18 @@ const questions = [
     {
         type: "input",
         name: 'contribution',
-        message: 'Contribution Instruction:'
+        message: 'Contribution:'
     },
     {
         type: 'list',
         name: 'license',
         message: 'Choose License:',
-        choices: ['Apache 2.0', 'EPL 2.0', 'GNU GPL v2.0', 'MIT', 'BSL 1.0', 'MPL 2.0', 'None'],
+        choices: ['Apache 2.0', 'EPL 2.0', 'GNU GPL v2.0', 'BSL 1.0', 'MIT', 'MPL 2.0', 'None'],
     },
     {
         type: "input",
         name: 'test',
-        message: 'Test?'
+        message: 'Test:'
     },
     {
         type: "input",
@@ -49,7 +49,7 @@ const questions = [
     {
         type: "input",
         name: "github",
-        message: "Please enter your GitHub Username:)",
+        message: "Please enter your GitHub Username:",
         validate: (githubInput) => {
           if (githubInput) {
             return true;
@@ -91,6 +91,7 @@ function init() {
     inquirer.prompt(questions).then((data)=>
     {
         writeToFile('./readme_generated/README_Generated.md', generateMarkdown(data))
+        console.log("Successful, great job. Now check out your new generated README!");
     });
 }
 

@@ -28,13 +28,13 @@ const questions = [
     {
         type: "input",
         name: 'contribution',
-        message: 'Open for contribution:'
+        message: 'Contribution Instruction:'
     },
     {
         type: 'list',
         name: 'license',
         message: 'Choose License:',
-        choices: ['MIT', 'Apache 2.0', 'EPL 2.0', 'GNU GPL v2.0', 'None'],
+        choices: ['Apache 2.0', 'EPL 2.0', 'GNU GPL v2.0', 'MIT', 'BSL 1.0', 'MPL 2.0', 'None'],
     },
     {
         type: "input",
@@ -46,6 +46,32 @@ const questions = [
         name: 'questions',
         message: 'Any questions?'
     },
+    {
+        type: "input",
+        name: "github",
+        message: "Please enter your GitHub Username:)",
+        validate: (githubInput) => {
+          if (githubInput) {
+            return true;
+          } else {
+            console.log("Please enter your GitHub username:");
+            return false;
+          }
+        },
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Please enter your email address:",
+        validate: (emailInput) => {
+          if (emailInput) {
+            return true;
+          } else {
+            console.log("Please enter your email address:");
+            return false;
+          }
+        },
+      },
 ];
 
 // Created a function to write README file.

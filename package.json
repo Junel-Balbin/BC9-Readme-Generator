@@ -1,14 +1,22 @@
 {
-  "name": "",
+  "name": "static-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "[How to create a Professional README](./readme-guide.md)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Junel Balbin",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junel-Balbin/BC9-Readme-Generator.git"
+  },
+  "bugs": {
+  "url": "https://github.com/Junel-Balbin/BC9-Readme-Generator/issues"
+  },
+  "homepage": "https://Junel-Balbin/BC9-Readme-Generator#readme"
 }

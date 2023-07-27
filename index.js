@@ -8,49 +8,55 @@ const questions = [
     {
         type: "input",
         name: 'title',
-        message: ''
+        message: 'Enter the project title:'
     },
     {
         type: "input",
         name: 'description',
-        message: ''
+        message: 'A brief description:'
     },
     {
         type: "input",
         name: 'installation',
-        message: ''
+        message: 'Installation Guide:'
     },
     {
         type: "input",
         name: 'usage',
-        message: ''
+        message: 'Usage Instruction:'
     },
     {
         type: "input",
         name: 'contribution',
-        message: ''
+        message: 'Open for contribution:'
     },
     {
         type: 'list',
         name: 'license',
         message: 'Choose License:',
-        choices: [''],
+        choices: ['MIT', 'Apache 2.0', 'EPL 2.0', 'GNU GPL v2.0', 'None'],
     },
     {
         type: "input",
         name: 'test',
-        message: ''
+        message: 'Test?'
     },
     {
         type: "input",
         name: 'questions',
-        message: ''
+        message: 'Any questions?'
     },
 ];
 
 // Created a function to write README file.
 function writeToFile(fileName, data) {
     const resolved = data
+    const folderPath = './readme_generated';
+
+    if (!fs.existsSync(folderPath)) {
+        fs.mkdirSync(folderPath);
+    }
+
     fs.writeFileSync(fileName, resolved)
 }
 

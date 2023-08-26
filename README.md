@@ -1,3 +1,5 @@
+<img src="./assets/images/banner.png">
+
 # Readme Generator
 
 ## Description:

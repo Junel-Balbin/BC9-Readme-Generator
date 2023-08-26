@@ -24,10 +24,10 @@ None.
 Open browser and follow link.
 
 ## Contribution:
-Created by Junel.
+Created by JB.
 
 ## Test:
-Used NPM.
+Used NPM Jest.
 
 ## License:
 MIT (https://opensource.org/licenses/MIT)
